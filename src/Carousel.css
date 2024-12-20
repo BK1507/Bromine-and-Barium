@@ -1,0 +1,8 @@
+.image{
+    height: 380px;
+    --gap:3rem;
+    margin-left: 0;
+    margin-right: 0;
+    width:100vw;
+    gap:var(--gap);
+}
