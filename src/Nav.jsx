@@ -8,6 +8,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import "./App.css";
 
 const Nav = () => {
+  
   return (
     
       <nav className="navbar navbar-expand-lg bg-light">

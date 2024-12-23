@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./Carousel.css";
-import img1 from './assets/Banner1.jpg';
-import img2 from './assets/Banner2.jpg';
-import img3 from './assets/Banner3.jpg';
+import img1 from './assets/Banner1.jpeg';
+import img2 from './assets/Banner2.jpeg';
+import img3 from './assets/Banner3.jpeg';
 const Carousel = () => {
   return (
 
