@@ -11,9 +11,12 @@ import img5 from './assets/img4.jpeg';
 import img6 from './assets/img5.jpeg';
 import img7 from './assets/img6.jpeg';
 import img8 from './assets/img7.jpeg';
+import ProductDescription from './ProductDescription';
+import { useNavigate } from 'react-router-dom';
 
 const Slider= () => {
         const [active, setActive] = useState(0);  
+        const navigate = useNavigate();
         let items= document.querySelectorAll('.item');      
         const loadShow = () => {
                 let items= document.querySelectorAll('.item');
@@ -43,64 +46,68 @@ const Slider= () => {
                 loadShow();
         }, [active]); 
         
-        const handleNext = () => { if (active + 1 < items.length) setActive(active + 1); };
-        const handlePrev = () => { if (active - 1 >= 0) setActive(active - 1); };
+        const handleNextItem = () => { if (active + 1 < items.length) setActive(active + 1); };
+        const handlePrevItem = () => { if (active - 1 >= 0) setActive(active - 1); };
+        async function selectItem(e) {
+                e.preventDefault();
+                navigate('/ProductDescription')
+        }
         return (
                 <div className="slider-container">
                        <center><h2>OUR PRODUCTS</h2></center>
                        <br/>
                         <div className="slider">
-                        <button id="prev" onClick={handlePrev}>&lt;</button>
-                                <div className="card item">
+                        <button id="prev" onClick={handlePrevItem}>&lt;</button>
+                                <div className="card item" onClick={selectItem}>
                                         <img src={img1} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img2} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img3} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img4} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img5} alt="hoodie" />
-                                        <div className="card-body">
+                                        <div className="card-body" >
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img6} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img7} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
                                                 <IconContext.Provider value={{ color: "black", className: "global-class-name" }}> <GiShoppingCart size={20} /> </IconContext.Provider>
                                         </div>
                                 </div>
-                                <div className="card item">
+                                <div className="card item" onClick={ProductDescription}>
                                         <img src={img8} alt="hoodie" />
                                         <div className="card-body">
                                                  <IconContext.Provider value={{ color: "red", className: "global-class-name" }}> <GoHeartFill size={20} /> </IconContext.Provider>
@@ -108,7 +115,7 @@ const Slider= () => {
                                         </div>
                                 </div>
 
-                                <button id="next" onClick={handleNext}>&gt;</button>
+                                <button id="next" onClick={handleNextItem}>&gt;</button>
                         </div>
                         
                 </div>);

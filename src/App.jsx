@@ -1,18 +1,26 @@
 
-import Nav from "./Nav"
-import Carousel from "./Carousel"
-import Marquee from "react-fast-marquee";
-import "./App.css";
-import Slider from "./Slider";
-
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
+import ProductDescription from "./ProductDescription";
+import Home from './Home';
+import Login from './Login';
+import Test from './NavTab';
+import SignUp from './SignUp';
+import Cart from './Cart';
+import Wishlist from './Wishlist';
 const App = () => {
   return (
-    <div>
-      <Marquee className="marquee"><span>Free Shipping on all orders!!</span><span>COD available in PAN India!!</span><span>Free Shipping on all orders!!</span><span>COD available in PAN India!!</span></Marquee>
-      <Nav />
-      <Carousel />
-      <br/>
-      <Slider/>
+    <div>      
+      <Router>
+        <Routes>
+          <Route path = "/ProductDescription" element = {<ProductDescription/>}/> 
+          <Route path = "/Home" element = {<Home/>}/> 
+          <Route path="/Login" element={<Login/>} />
+          <Route path="/Test" element={<Test/>} />         
+          <Route path="/Signup" element={<SignUp/>} /> 
+          <Route path="/Cart" element={<Cart/>} /> 
+          <Route path="/Wishlist" element={<Wishlist/>} /> 
+        </Routes>
+      </Router>
     </div>
     
 
