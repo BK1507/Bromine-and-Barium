@@ -1,4 +1,4 @@
-import Marquee from 'react-fast-marquee';
+
 import './Login.css';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -8,10 +8,10 @@ const Login = () => {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-6 marquee-container'>
-                    <Marquee className='marquee1' speed={8} pauseOnHover={true}>BROMINE AND BARIUM</Marquee>
+                <div className='col marquee-container'>
+                    <marquee className='marquee1' speed={5} onMouseOver={(e)=>{e.target.stop()}} onMouseOut={(e)=>{e.target.start()}} >BROMINE AND BARIUM      BROMINE AND BARIUM</marquee>
                     <br/>
-                    <Marquee className='marquee2' speed={8} pauseOnHover={true}>BROMINE AND BARIUM</Marquee>
+                    <marquee className='marquee2' speed={5} onMouseOver={(e)=>{e.target.stop()}} onMouseOut={(e)=>{e.target.start()}}>BROMINE AND BARIUM      BROMINE AND BARIUM</marquee>
                 </div>
                 <div className=" col login-container">
 

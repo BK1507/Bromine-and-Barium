@@ -7,6 +7,7 @@ import Test from './NavTab';
 import SignUp from './SignUp';
 import Cart from './Cart';
 import Wishlist from './Wishlist';
+import Footer from './Footer';
 const App = () => {
   return (
     <div>      
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/Signup" element={<SignUp/>} /> 
           <Route path="/Cart" element={<Cart/>} /> 
           <Route path="/Wishlist" element={<Wishlist/>} /> 
+          <Route path="/Footer" element={<Footer/>} /> 
         </Routes>
       </Router>
     </div>

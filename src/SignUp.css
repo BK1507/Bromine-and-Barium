@@ -1,10 +1,8 @@
 
 .signup-container {
-    width: 60vh;   
-    align-items: center;
+    width: 60%;   
     background: #fff;
     padding: 2rem;
-   
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,4 +41,37 @@ background: linear-gradient(to right, #01020F 10%, #CF631B 30%);
     background-color: #CF631B;
     
 }
+
+.marquee-container{
+    overflow: hidden;
+   
+ }
+ .marquee1{
+     background: linear-gradient(to right, #01020F 10%, #CF631B 32%);
+    color: #01020F;
+    font-weight: 800;
+    transform: rotateZ(324deg);
+     font-size: xx-large;
+     width: 429px;
+     margin-left: -68px;
+     margin-top: 151px;
+    
+ }
+ 
+ .marquee2{
+     background: linear-gradient(to right, #01020F 10%, #CF631B 32%);
+    color: #01020F;
+    font-weight: 800;   
+    transform: rotateZ(44deg);
+    font-size: -webkit-xxx-large;
+    width: 413px;
+    margin-left: -113px;
+     margin-top: 19px;
+ 
+ }
+ .container{
+     width: 120vh;
+ }
+ 
+ 
 

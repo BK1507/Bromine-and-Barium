@@ -3,6 +3,7 @@ import Nav from "./Nav"
 import Carousel from "./Carousel"
 import "./App.css";
 import Slider from "./Slider";
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -12,7 +13,8 @@ const Home = () => {
       <Carousel />
       <br />
       <Slider />
-
+      
+      <Footer/>
 
     </div>
 

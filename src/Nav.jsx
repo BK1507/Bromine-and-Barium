@@ -16,18 +16,9 @@ import SignUp from "./SignUp";
 
 
 const Nav = () => {
+
  
-function showPopup(e) {
-  
-  if(document.getElementById(e)){
-    console.log(e)
-    var popup=document.getElementById(e);
-    popup.style.display ='block';
-  }
-  
-  
-}
- 
+
   return (
     <>
       <div>
@@ -51,10 +42,14 @@ function showPopup(e) {
                 </a>
                 <ul className="dropdown-menu dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDarkDropdownMenuLink">
                   <li>
-                      <button className="dropdown-item" onClick={showPopup('popup')} >Sign Up</button>                                        
-                  </li>
+                  <Popup contentStyle={{ width: 'fit-content', height: 'fit-content' }} trigger={<button className="dropdown-item" >Sign Up</button>} position={'left top'}>
+                      <div>
+                        <SignUp />
+                      </div>
+                    </Popup>
+                    </li>
                   <li>
-                    <Popup contentStyle={{width:'fit-content',height:'fit-content'}}trigger={<button className="dropdown-item" >Log In</button>} position={'left top'}>
+                    <Popup contentStyle={{ width: 'fit-content', height: 'fit-content' }} trigger={<button className="dropdown-item" >Log In</button>} position={'left top'}>
                       <div>
                         <Login />
                       </div>
@@ -67,13 +62,11 @@ function showPopup(e) {
             </ul>
 
           </div>
-          
+
         </nav>
 
       </div>
-      <div id="popup" className="popup">
-                        <SignUp />
-          </div>
+      
     </>
   )
 }

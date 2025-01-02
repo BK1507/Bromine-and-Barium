@@ -1,0 +1,22 @@
+.footer{
+    position: absolute; 
+   width:100%;
+   margin-bottom: 100px;
+}
+.footer-container{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.title{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: #01020F;
+    
+background: linear-gradient(to right, #01020F 10%, #CF631B 32%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.instagram{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  
+}
